@@ -187,10 +187,7 @@ mkdir -p docs/.vuepress/public/videos
 1. Coloca tus videos en el directorio `docs/.vuepress/public/videos/`
 2. Usa la etiqueta HTML `<video>` para mostrarlos:
 
-## Video local
-## My Video
 
-<video src="/videos/1.mp4" controls></video>
 
 
 

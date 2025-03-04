@@ -110,12 +110,6 @@
 <li>Coloca tus videos en el directorio <code v-pre>docs/.vuepress/public/videos/</code></li>
 <li>Usa la etiqueta HTML <code v-pre>&lt;video&gt;</code> para mostrarlos:</li>
 </ol>
-<h2 id="video-local" tabindex="-1"><a class="header-anchor" href="#video-local"><span>Video local</span></a></h2>
-<h2 id="my-video" tabindex="-1"><a class="header-anchor" href="#my-video"><span>My Video</span></a></h2>
-<video controls width="600">
-  <source src="/videos/video2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 </div></template>
 
 
