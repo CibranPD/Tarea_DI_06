@@ -1,6 +1,7 @@
 # Tutorial para la configuración Manual de VuePress 2.0
 
-Este proyecto está configurado manualmente siguiendo la [guía oficial de VuePress](https://vuepress.vuejs.org/guide/getting-started.html#project-setup).
+VuePress es un generador de sitios estáticos que utiliza Markdown para la escritura de contenido.
+Este proyecto ha sido construído manualmente en Windows siguiendo la [guía oficial de VuePress](https://vuepress.vuejs.org/guide/getting-started.html#project-setup).
 
 ## Requisitos previos
 
@@ -9,7 +10,7 @@ Debemos tener instalado previamente Node.js y yarn.
 - [Node.js](https://nodejs.org/en/) versión 16+
 - [Yarn](https://yarnpkg.com/getting-started/install)
 
-Comprobamos si están instalados y su versión con:
+Comprueba si están instalados y su versión con:
 
 ```bash
 yarn --version
@@ -22,7 +23,7 @@ node --version
 
 ### Paso 1: Crear y configurar tu proyecto
 
-Primero, crea un directorio para tu proyecto y navega hacia él:
+Primero, en PowerShell crea un directorio para tu proyecto y situate en él:
 
 ```bash
 mkdir proyecto
@@ -77,6 +78,7 @@ Edita el archivo `docs/.vuepress/config.js`:
 
 ![Descripción de la imagen](/imagenes/Imagen6.png)
 
+Este códido se puede obtener en la página oficial de VuePress.
 
 ### Paso 5: Crear tu primera página
 
@@ -88,7 +90,7 @@ Edita el archivo `docs/README.md` y añade algún contenido:
 
 ### Paso 6: Arrancar el Dev Server
 
-Antes de arrancar el Dev Server añadimos scripts a package.json
+Antes de arrancar el Dev Server añadimos los siguientes scripts a package.json
 
 ![Descripción de la imagen](/imagenes/Imagen8.png)
 
@@ -100,14 +102,14 @@ yarn docs:dev
 
 ![Descripción de la imagen](/imagenes/Imagen9.png)
 
-Ahora puedes acceder a tu sitio en `http://localhost:8080`.
+Ahora puedes acceder a tu sitio siguiendo el link en `http://localhost:8080`.
 
 ![Descripción de la imagen](/imagenes/Imagen10.png)
 
 
 ### Paso 7: Construir para producción
 
-Cuando estés listo para desplegar tu sitio:
+Cuando estés listo para desplegar tu sitio introduce:
 
 ```bash
 yarn docs:build
@@ -117,13 +119,15 @@ Esto generará archivos estáticos en `docs/.vuepress/dist/` que podrás despleg
 
 ### Paso 8: Añadir contenido
 
-Ahora puedes ir al archivo README.md y modificarlo para darle contenido a tu página. El lenguaje empleado es Markdown, por lo que tienes que seguir sus reglas.
+Ahora puedes ir al archivo README.md y modificarlo para darle contenido a tu página. El lenguaje empleado es Markdown, por lo que deberás seguir sus reglas.
 
 ![Descripción de la imagen](/imagenes/Imagen10.5.png)
 
+## Personalización
+
 ## Cambiar el tema
 
-VuePress 2.0 permite cambiar entre temas disponibles o crear tus propios temas. Aquí te muestro cómo cambiar a algunos temas populares:
+VuePress 2.0 permite cambiar entre temas disponibles o crear tus propios temas.
 
 ### Opción 1: Personalizar el tema por defecto
 
@@ -140,7 +144,8 @@ Primero, instala el tema que deseas utilizar:
 yarn add -D vuepress-theme-hope
 ```
 
-Luego, configúralo en tu archivo `config.ts`:
+Luego, configúralo en tu archivo `config.ts`.
+
 
 ```typescript
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -160,6 +165,8 @@ export default defineUserConfig({
   }),
 })
 ```
+La lista de todos los parámetros que se pueden configurar se pue ver [en](https://ecosystem.vuejs.press/themes/default/config.html)
+
 ## Añadir contenido multimedia
 
 VuePress facilita la incorporación de imágenes, videos y otros elementos multimedia en tus documentos markdown. A continuación vemos cómo hacerlo:
@@ -179,13 +186,27 @@ mkdir -p docs/.vuepress/public/videos
 
 1. Coloca tus imágenes en el directorio `docs/.vuepress/public/imagenes/`
 2. En tus archivos markdown, referencia las imágenes con la ruta `/imagenes/nombre-de-la-imagen.png`
+La sintaxis es la siguiente:
+
+```markdown
+![Texto alternativo](/imagenes/mi-imagen.jpg)
+```
+
 
 ### Añadir videos
 
-#### Opción 1: Videos alojados localmente
+Los videos deben almacenarse en la carpeta docs/.vuepress/public/videos/
 
-1. Coloca tus videos en el directorio `docs/.vuepress/public/videos/`
-2. Usa la etiqueta HTML `<video>` para mostrarlos:
+#### Añade videos alojados localmente
+
+1. Si tienes un archivo de video dentro de tu proyecto, guárdalo en la carpeta docs/.vuepress/public/videos/.
+2. Después, usa la etiqueta `<video>` en tu Markdown:
+
+![Descripción de la imagen](/imagenes/Imagen12.png)
+
+
+
+
 
 
 
